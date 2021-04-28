@@ -4,5 +4,8 @@ addpoint(x position, y position, the charector you want placed)
 getpoint(x position, y position)
     returns the charector at the specifide location
 
+movey(x position, y position, charector, amount)
+    moves the specifide charector by "amount" on the y axis. leave "charector" as "~" to just move the current point that is already there.
+
 fall(x position, y position, charector)
     moves the specifide charector down until it hits the bottom. set charector to "~" to automaticlly get the charector already there.

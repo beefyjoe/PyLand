@@ -39,6 +39,22 @@ def fall(xpos,ypos,char):
         ypos += 1
         addpoint(xpos,ypos,Fchar)
 
+def moveY(xpos,ypos,char,move):
+    if char == "~":
+        Fchar = getpoint(xpos,ypos)
+    else:
+        Fchar = char
+    addpoint(xpos,ypos,"_")
+    addpoint(xpos,ypos+(move * -1),Fchar)
+
+def moveX(xpos,ypos,char,move):
+    if char == "~":
+        Fchar = getpoint(xpos,ypos)
+    else:
+        Fchar = char
+    addpoint(xpos,ypos,"_")
+    addpoint(xpos*(move * -1),ypos + 1,Fchar)
+
 def PLand(clr):
     print("                                                                  ")
     l = 0
@@ -49,7 +65,6 @@ def PLand(clr):
         l += 1
 
 def getpoint(x,y):
-    
     return pregen[(x - 1) + ((y - 1) * length)]
 
 def addpoint(x,y,char):
@@ -64,5 +79,9 @@ char = [
 ]
 
 gen(length,height,1)
-addpoint(2,2,"t")
-test = getpoint(2,2)
+addpoint(15,height,"t")
+
+#moveX(15,height,"~",2)
+
+
+
