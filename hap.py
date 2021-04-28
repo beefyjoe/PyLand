@@ -53,7 +53,8 @@ def moveX(xpos,ypos,char,move):
     else:
         Fchar = char
     addpoint(xpos,ypos,"_")
-    addpoint(xpos*(move * -1),ypos + 1,Fchar)
+    addpoint(xpos + move,ypos,Fchar)
+    
 
 def PLand(clr):
     print("                                                                  ")
@@ -79,9 +80,5 @@ char = [
 ]
 
 gen(length,height,1)
-addpoint(15,height,"t")
-
-#moveX(15,height,"~",2)
-
-
+addpoint(15,height,"^")
 
