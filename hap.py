@@ -27,13 +27,17 @@ def gen(x, y, times):
         repeat += 1
 
 def fall(xpos,ypos,char):
+    if char == "~":
+        Fchar = getpoint(xpos,ypos)
+    else:
+        Fchar = char
     i = 0
     while ypos != height:
         time.sleep(.0625)
-        AddPoint(xpos,ypos,"_")
+        addpoint(xpos,ypos,"_")
         time.sleep(.0625)
         ypos += 1
-        AddPoint(xpos,ypos,char)
+        addpoint(xpos,ypos,Fchar)
 
 def PLand(clr):
     print("                                                                  ")
@@ -60,6 +64,5 @@ char = [
 ]
 
 gen(length,height,1)
-addpoint(2,3,"x")
+addpoint(2,2,"t")
 test = getpoint(2,2)
-print(test)

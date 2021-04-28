@@ -3,3 +3,6 @@ addpoint(x position, y position, the charector you want placed)
 
 getpoint(x position, y position)
     returns the charector at the specifide location
+
+fall(x position, y position, charector)
+    moves the specifide charector down until it hits the bottom. set charector to "~" to automaticlly get the charector already there.
