@@ -1,7 +1,9 @@
+import os
+import time
 import random
 
-length = 5
-height = 5
+length = 38
+height = 15
 
 
 def gen(x, y, times):
@@ -24,7 +26,17 @@ def gen(x, y, times):
             l += 1
         repeat += 1
 
+def fall(xpos,ypos,char):
+    i = 0
+    while ypos != height:
+        time.sleep(.0625)
+        AddPoint(xpos,ypos,"_")
+        time.sleep(.0625)
+        ypos += 1
+        AddPoint(xpos,ypos,char)
+
 def PLand(clr):
+    print("                                                                  ")
     l = 0
     counter = 0
     while l != height: # prints each line
@@ -32,12 +44,22 @@ def PLand(clr):
         counter += length
         l += 1
 
+def getpoint(x,y):
+    
+    return pregen[(x - 1) + ((y - 1) * length)]
+
+def addpoint(x,y,char):
+    position = (x - 1) + ((y - 1) * length)
+    pregen[position] = char
+    cls = lambda: os.system('cls')
+    cls()
+    PLand(0)
+
 char = [
-    "_",
-    "-",
-    "^",
-    "O"
+    "_"
 ]
 
 gen(length,height,1)
-
+addpoint(2,3,"x")
+test = getpoint(2,2)
+print(test)

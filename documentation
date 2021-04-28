@@ -1,0 +1,5 @@
+addpoint(x position, y position, the charector you want placed)
+    places a charector at the specifide location
+
+getpoint(x position, y position)
+    returns the charector at the specifide location
